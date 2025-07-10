@@ -6,6 +6,6 @@ import StartingPage from './StartingPage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <>
-    <StartingPage />
+    <App />
   </>,
 )
