@@ -3,6 +3,12 @@ import Questions from "./Questions";
 import { useState, useEffect } from "react";
 
 
+// Project: react-quiz-app backlog:
+//
+// * style the questions and answers
+// * implement html entities decoding for questions and answers
+//
+
 
 export default function App() {
   const [questions, setQuestions] = useState(null);
