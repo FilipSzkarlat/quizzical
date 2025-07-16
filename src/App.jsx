@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 
 // Project: react-quiz-app backlog:
 //
-// * style the questions and answers
-// * implement html entities decoding for questions and answers
+// * add radio buttons to answers
+// * prepare function to check answers
 //
 
 

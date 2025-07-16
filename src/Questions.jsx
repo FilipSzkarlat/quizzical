@@ -9,12 +9,14 @@ export default function Questions({questions}) {
             {questions.map((question, index) => (
                 <div key={index} className="question">
                     <h2>{decode(question.question)}</h2>
-                    <ul>
-
+                    <div className="answers">
                         {question.answers.map((answer, index) => (
-                            <li key={index}>{decode(answer)}</li>
+                            <label key={index} className="answer">
+                                {decode(answer)}
+                                <input type='radio' name={question.question} value={decode(answer)} key={index} hidden/>
+                            </label>
                         ))}
-                    </ul>
+                    </div>
                 </div>
             ))}
             <button>Check answers</button>

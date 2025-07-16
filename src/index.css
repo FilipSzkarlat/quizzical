@@ -55,18 +55,17 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-top: 2em;
 }
 
 .question{
   width: 70%;
   padding: 1em;
-  background-color: #F5F7FB;
   border-radius: .75em;
   margin-bottom: 1em;
 }
 
-.question ul {
-  list-style: none;
+.answers {
   padding-bottom: 1em;
   display: flex;
   gap: 1.5em;
@@ -74,7 +73,8 @@ body {
   border-bottom: #DBDEF0 solid 2px;
 }
 
-.question li {
+.answers label{
+  text-align: center;
   padding: .5em 1.5em;
   border-radius: .5em;
   margin-bottom: .5em;
@@ -84,8 +84,13 @@ body {
   background-color: transparent;
 }
 
-.question li:hover,
-.question li:focus {
+.answer:has(input:checked) {
+  background-color: #D6DBF5;
+  border: solid 2px transparent;
+}
+
+.answers label:hover,
+.answers label:focus {
   background-color: #D6DBF5;
   cursor: pointer;
   border: solid 2px #D6DBF5;
