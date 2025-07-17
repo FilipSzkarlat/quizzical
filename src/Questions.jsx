@@ -1,9 +1,12 @@
 import {decode} from 'html-entities';
 
 
-export default function Questions({questions}) {
+export default function Questions({questions, checkAnswers}) 
+{
     const answers = questions.map(question => question.answers);
-    console.log(answers);
+    console.log(questions)
+
+
     return (
         <div className="questions">
             {questions.map((question, index) => (
@@ -19,7 +22,7 @@ export default function Questions({questions}) {
                     </div>
                 </div>
             ))}
-            <button>Check answers</button>
+            <button onClick={checkAnswers}>Check answers</button>
         </div>
     );
 

@@ -1,11 +1,11 @@
 import StartingPage from "./StartingPage";
 import Questions from "./Questions";
-import { useState, useEffect } from "react";
+import clsx from "clsx";
+import { useState } from "react";
 
 
 // Project: react-quiz-app backlog:
 //
-// * add radio buttons to answers
 // * prepare function to check answers
 //
 
@@ -13,6 +13,20 @@ import { useState, useEffect } from "react";
 export default function App() {
   const [questions, setQuestions] = useState(null);
 
+  function checkAnswers() {
+      questions.forEach(question => {
+          const selectedAnswer = document.querySelector(`input[name="${question.question}"]:checked`);
+
+            setQuestions(prevQuestions =>
+              prevQuestions.map(q =>
+                q.question === question.question ? 
+                  { ...q, chosenAnswer: selectedAnswer.value === question.correctAnswer } : q
+              )
+            )
+
+      });
+      console.log("Checking answers...");
+  }
 
 function getQuestions() {
   // This function would typically fetch questions from an API or a local source.
@@ -23,8 +37,9 @@ function getQuestions() {
     // Here you would typically set the state with the fetched questions.
     setQuestions(data.results.map((question, index) => ({
       question: question.question,
-      key: index,
       correctAnswer: question.correct_answer,
+      chosenAnswer: false, // Initialize chosenAnswer to false
+      key: index,
       answers: question.incorrect_answers.concat(question.correct_answer).sort(() => Math.random() - 0.5), // Shuffle answers
     })))
   })
@@ -34,7 +49,7 @@ function getQuestions() {
 
   return (
     <>
-      {questions ? <Questions questions={questions} /> : <StartingPage startQuize={getQuestions}/>}
+      {questions ? <Questions questions={questions} checkAnswers={checkAnswers} /> : <StartingPage startQuize={getQuestions}/>}
     </>
   )
 }
