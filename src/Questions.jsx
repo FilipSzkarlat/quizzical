@@ -3,7 +3,6 @@ import {decode} from 'html-entities';
 
 export default function Questions({questions, checkAnswers}) 
 {
-    const answers = questions.map(question => question.answers);
     console.log(questions)
 
 
@@ -14,7 +13,7 @@ export default function Questions({questions, checkAnswers})
                     <h2>{decode(question.question)}</h2>
                     <div className="answers">
                         {question.answers.map((answer, index) => (
-                            <label key={index} className="answer">
+                            <label key={index} className={question.answerClassName}>
                                 {decode(answer)}
                                 <input type='radio' name={question.question} value={decode(answer)} key={index} hidden/>
                             </label>

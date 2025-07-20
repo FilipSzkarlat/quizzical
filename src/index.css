@@ -84,6 +84,16 @@ body {
   background-color: transparent;
 }
 
+.questions .question .answers .correct {
+  background-color: #94D7A2;
+  border: solid 2px transparent;
+}
+
+.questions .question .answers .incorrect {
+  background-color: #F8BCBC;
+  border: solid 2px transparent;
+}
+
 .answer:has(input:checked) {
   background-color: #D6DBF5;
   border: solid 2px transparent;
