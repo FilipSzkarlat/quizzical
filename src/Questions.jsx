@@ -13,7 +13,7 @@ export default function Questions({questions, checkAnswers})
                         {question.answers.map((answer, index) => (
                             <label key={index} className={question.answerClassName}>
                                 {answer}
-                                <input type='radio' name={question.question} value={(answer)} key={index} hidden/>
+                                <input type='radio' name={question.id} value={(answer)} key={index} hidden/>
                             </label>
                         ))}
                     </div>
