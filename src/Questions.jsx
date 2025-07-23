@@ -1,8 +1,6 @@
 
-export default function Questions({questions, checkAnswers}) 
+export default function Questions({questions, checkAnswers, playAgain}) 
 {
-    console.log(questions)
-
 
     return (
         <div className="questions">
@@ -19,7 +17,9 @@ export default function Questions({questions, checkAnswers})
                     </div>
                 </div>
             ))}
-            <button onClick={checkAnswers}>Check answers</button>
+            {questions.every(question => question.chosenAnswer) ? 
+            <button onClick={playAgain}>Play again</button> :
+            <button onClick={checkAnswers}>Check answers</button>}
         </div>
     );
 

@@ -93,6 +93,7 @@ body {
   background-color: #F8BCBC;
   border: solid 2px transparent;
   color: #293264;
+  opacity: 0.5;
 }
 
 .answer:has(input:checked) {
