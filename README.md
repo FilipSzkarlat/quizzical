@@ -1,12 +1,21 @@
-# React + Vite
+# Quizzical 🎯
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Quizzical is a sleek and interactive quiz app built with **React**. It allows users to test their knowledge by answering multiple-choice questions, get immediate feedback, and see their final score — all wrapped in a clean and responsive UI.
 
-Currently, two official plugins are available:
+![Screenshot](https://quizzicalbyfilip.netlify.app/screenshot.png) <!-- opcjonalnie: podmień link, jeśli masz zrzut ekranu -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+👉 [https://quizzicalbyfilip.netlify.app](https://quizzicalbyfilip.netlify.app)
+
+---
+
+## 🛠 Built With
+
+- React
+- JavaScript (ES6+)
+- HTML5 & CSS3
+- [Open Trivia Database API](https://opentdb.com/) – for fetching quiz questions
+
