@@ -18,7 +18,10 @@ export default function Questions({questions, checkAnswers, playAgain})
                 </div>
             ))}
             {questions.every(question => question.chosenAnswer) ? 
-            <button onClick={playAgain}>Play again</button> :
+            <div className="result">
+                <h2>You scored {questions.filter(q => q.chosenAnswer === q.correctAnswer).length} out of {questions.length} correct answers</h2>
+                <button onClick={playAgain}>Play again</button>
+            </div>:
             <button onClick={checkAnswers}>Check answers</button>}
         </div>
     );

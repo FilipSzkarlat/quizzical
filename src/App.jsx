@@ -6,7 +6,7 @@ import { decode } from 'html-entities';
 
 // Project: react-quiz-app backlog:
 //
-// * add a score counter
+// 
 //
 
 

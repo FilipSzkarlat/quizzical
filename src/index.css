@@ -123,3 +123,11 @@ body {
   background-color: #6976B5;
   cursor: pointer;
 }
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 2em;
+}
