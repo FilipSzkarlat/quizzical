@@ -2,8 +2,6 @@
 
 Quizzical is a sleek and interactive quiz app built with **React**. It allows users to test their knowledge by answering multiple-choice questions, get immediate feedback, and see their final score — all wrapped in a clean and responsive UI.
 
-![Screenshot](https://quizzicalbyfilip.netlify.app/screenshot.png) <!-- opcjonalnie: podmień link, jeśli masz zrzut ekranu -->
-
 ---
 
 ## 🚀 Live Demo
